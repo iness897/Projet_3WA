@@ -1,0 +1,124 @@
+body{
+
+  .container_create{
+    /* height: 210px; */
+    width: 100%;
+    // background-color: #e9eef6;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+  
+    .form{
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  
+      input{
+        border: none;
+        outline: none;
+        width: 350px;
+        padding: 0.5rem;
+        border-bottom: 1px solid #000;
+        background-color: #e9eef6;
+        height: 40px;
+        background-color: #c8eaf4;
+      }
+      .form-control{
+         max-width: 500px;
+         width: 100%;
+         height: 40px;
+         max-height: 150px;
+         height: fit-content;
+      }
+    }
+
+    .container_button{
+      button{
+        background: #c7e9f3;
+        border: 1px solid black;
+        color: black;
+        font-weight: 500;
+
+      }
+    }
+  
+  }
+
+  .container_task{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 20px 100px;
+
+    .list{
+      width: 100%;
+      height: 68vh;
+      display: flex;
+      flex-direction: row;
+      overflow-y: scroll;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 5px;
+    }
+
+    .btn-area{
+      margin-bottom: 10px;
+
+      .secondaryBtn{
+        background-color: rgb(92, 92, 92);
+        color: white;
+        border-radius: 0px;
+        border: none;
+        padding: 10px;
+        width: fit-content;
+        cursor: pointer;
+      }
+
+      .active{
+        background-color: #0dcaf042;;
+      }
+
+    }
+
+    
+
+  }
+
+
+  /* Style scrollbar  
+
+  &::-webkit-scrollbar {
+    width: 5px;            
+  }
+
+  &::-webkit-scrollbar-track {
+    background: white;       
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(93, 147, 225);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(93, 147, 225);
+    border-radius: 10px;
+  }
+
+}
+
+
