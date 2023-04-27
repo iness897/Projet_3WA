@@ -16,9 +16,9 @@ app.use((req, res, next) => {
   });
 
 mongoose
-.connect(process.env.MONGODB_URL)
-.then(() => console.log(`Connecté à MongoDB`))
-.catch((err) => console.log(err))
+  .connect(process.env.MONGODB_URL)
+  .then(() => console.log(`Connecté à MongoDB`))
+  .catch((err) => console.log(err))
 
 app.use(routes)
 

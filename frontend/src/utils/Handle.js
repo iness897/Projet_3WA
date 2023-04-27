@@ -1,45 +1,36 @@
 import axios from 'axios'
 
+// `url` correspond à l’URL à utiliser pour faire la requête au serveur.
 const url = "http://localhost:3005"
 
-const getAllTask = (setTasks) =>{
-    axios
+
+
+const getAllTask = () =>{
+   return  axios
     .get(url)
+    
+      // `data` est le contenu de la réponse renvoyée par le serveur.
+
     .then(({data}) =>{
-        setTasks(data)
+       return data
     })
 }
 
-
-const createTask = (name, setName, description, setDescription, setTasks) =>{
-    axios
+const createTask = (name, description) =>{
+    return axios
     .post(`${url}/`, {name, description})
-    .then((data) =>{
-        setName("")
-        setDescription("")
-        getAllTask(setTasks)
-    })
     .catch((err) => console.log(err))
 }
 
-const updateTask = (toDoId, name, setName, description, setDescription, setTasks, setUpdate) =>{
-    axios
-    .put(`${url}/${toDoId}`, {_id : toDoId, name, description})
-    .then((data) =>{
-        setName("")
-        setDescription("")
-        setUpdate(false)
-        getAllTask(setTasks)
-    })
+const updateTask = (toDoId, name, description, status, progress) =>{
+    return axios
+    .put(`${url}/${toDoId}`, {_id : toDoId, name, description, status, progress})
     .catch((err) => console.log(err))
 }
 
-const removeTask = (toDoId, setInprogress) =>{
+const removeTask = (toDoId) =>{
     axios
     .delete(`${url}/${toDoId}`, {_id : toDoId})
-    .then((data) =>{
-        getAllTask(setInprogress)
-    })
     .catch((err) => console.log(err))
 }
 
